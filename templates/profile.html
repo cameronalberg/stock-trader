@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <div class = "profile">
+        <div class = row>
+            <p><b>Username:</b> {{ username }} </p>
+            <a href="/password"><button class="btn btn-primary" type="submit">Change Password</button></a>
+        </div>
+        <div class  = "row">
+            <p><b>Available Balance</b>: {{ balance }} </p>
+            <a href="/addcash"><button class="btn btn-primary" type="submit">Add Cash</button></a>
+        </div>
+    </div>
+{% endblock %}

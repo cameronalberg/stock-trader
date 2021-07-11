@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- display summary of stocks owned, number of shares, current price, and total value of each holding-->
+            {% for holding in holdings %}
+                <tr>
+                    <td>{{ holding.symbol }}</td>
+                    <td>{{ holding.name }}</td>
+                    <td>{{ holding.shares }}</td>
+                    <td>{{ holding.price }}</td>
+                    <td>{{ holding.total }}</td>
+                </tr>
+            {% endfor %}
+                <tr>
+                    <td colspan="4"></td>
+                    <td><b>{{ assets }}</b></td>
+                </tr>
+        </tbody>
+    </table>
+{% endblock %}
